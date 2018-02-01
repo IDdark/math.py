@@ -1511,7 +1511,7 @@ def bot(op):
                     with open('sider.json', 'w') as fp:
                      json.dump(wait2, fp, sort_keys=True, indent=4)
                      cl.sendText(msg.to, "Set reading point:\n" + datetime.now().strftime('%H:%M:%S'))
-                     print wait2
+                     print ("wait2")
 
                     
             elif "lurk off" == msg.text.lower():
