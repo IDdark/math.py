@@ -24,7 +24,6 @@ cl = LINETCR.LINE()
 cl.login(token="CARA DAPETIN TOKET.... LINK : NEKOPOI.GDN\nJAVAVIDOL.COM\nENTAH WEB APA LAGI UNTUK DAPAETIN TOKET")
 cl.loginResult()
 
-print "==================[Login Success]==================="
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
