@@ -1476,7 +1476,7 @@ def bot(op):
                         nm5 += [nama[m]]
                     summon(msg.to, nm5)
                  if jml > 500:
-                     print "Terlalu Banyak Men 500+"
+                     print ("Terlalu Banyak Men 500+")
                  cnt = Message()
                  cnt.text = "Jumlah:\n" + str(jml) +  " Members"
                  cnt.to = msg.to
