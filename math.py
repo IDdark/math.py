@@ -995,7 +995,7 @@ def bot(op):
                 cl.sendText(msg.to,"Send Contact")
                 
             elif msg.text in ["Like:me","Like me"]: #Semua Bot Ngelike Status Akun Utama
-                print "[Command]Like executed"
+                print ("[Command]Like executed")
                 cl.sendText(msg.to,"Like Status Owner")
                 try:
                   likeme()
@@ -1003,7 +1003,7 @@ def bot(op):
                   pass
                 
             elif msg.text in ["Like:friend","Like friend"]: #Semua Bot Ngelike Status Teman
-                print "[Command]Like executed"
+                print ("[Command]Like executed")
                 cl.sendText(msg.to,"Like Status Teman")
                 try:
                   likefriend()
@@ -1062,7 +1062,7 @@ def bot(op):
 #==============================================================================#
             elif "Ratakan" in msg.text:
                 if msg.toType == 2:
-                    print "ok"
+                    print ("ok")
                     _name = msg.text.replace("Ratakan","")
                     gs = cl.getGroup(msg.to)
                     targets = []
@@ -1553,15 +1553,15 @@ def bot(op):
                                 zxc += pesan2
                                 msg.contentType = 0
            
-                        print zxc
+                        print ("zxc")
                         msg.text = xpesan+ zxc + "\nLurking time: %s\nCurrent time: %s"%(wait2['setTime'][msg.to],datetime.now().strftime('%H:%M:%S'))
                         lol ={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}
-                        print lol
+                        print ("lol")
                         msg.contentMetadata = lol
                         try:
                           cl.sendMessage(msg)
                         except Exception as error:
-                              print error
+                              print ("error")
                         pass
                
            
@@ -1833,7 +1833,7 @@ def bot(op):
                 msg.contentMetadata = {"mid": key1}
                 cl.sendMessage(msg)
             elif "Getpict @" in msg.text:
-                print "[Command]dp executing"
+                print ("[Command]dp executing")
                 _name = msg.text.replace("Getpict @","")
                 _nametarget = _name.rstrip('  ')
                 gs = cl.getGroup(msg.to)
@@ -1851,9 +1851,9 @@ def bot(op):
                             cl.sendImageWithURL(msg.to, path)
                         except Exception as e:
                             raise e
-                print "[Command]dp executed"
+                print ("[Command]dp executed")
             elif "Getvid @" in msg.text:
-                print "[Command]dp executing"
+                print ("[Command]dp executing")
                 _name = msg.text.replace("Getvid @","")
                 _nametarget = _name.rstrip('  ')
                 gs = cl.getGroup(msg.to)
@@ -1871,9 +1871,9 @@ def bot(op):
                             cl.sendVideoWithURL(msg.to, path)
                         except Exception as e:
                             raise e
-                print "[Command]dp executed"
+                print ("[Command]dp executed")
             elif "Picturl @" in msg.text:
-                print "[Command]dp executing"
+                print ("[Command]dp executing")
                 _name = msg.text.replace("Picturl @","")
                 _nametarget = _name.rstrip('  ')
                 gs = cl.getGroup(msg.to)
@@ -1891,9 +1891,9 @@ def bot(op):
                             cl.sendText(msg.to, path)
                         except Exception as e:
                             raise e
-                print "[Command]dp executed"
+                print ("[Command]dp executed")
             elif "Getcover @" in msg.text:
-                print "[Command]cover executing"
+                print ("[Command]cover executing")
                 _name = msg.text.replace("Getcover @","")    
                 _nametarget = _name.rstrip('  ')
                 gs = cl.getGroup(msg.to)
@@ -1912,9 +1912,9 @@ def bot(op):
                             cl.sendImageWithURL(msg.to, path)
                         except Exception as e:
                             raise e
-                print "[Command]cover executed"
+                print ("[Command]cover executed")
             elif "Coverurl @" in msg.text:
-                print "[Command]cover executing"
+                print ("[Command]cover executing")
                 _name = msg.text.replace("Coverurl @","")    
                 _nametarget = _name.rstrip('  ')
                 gs = cl.getGroup(msg.to)
@@ -1933,7 +1933,7 @@ def bot(op):
                             cl.sendText(msg.to, path)
                         except Exception as e:
                             raise e
-                print "[Command]cover executed"
+                print ("[Command]cover executed")
             elif "Getgrup image" in msg.text:
                 group = cl.getGroup(msg.to)
                 path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
@@ -1943,7 +1943,7 @@ def bot(op):
                 path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
                 cl.sendText(msg.to,path)
             elif "Mycopy @" in msg.text:
-                   print "[COPY] Ok"
+                   print ("[COPY] Ok")
                    _name = msg.text.replace("Mycopy @","")
                    _nametarget = _name.rstrip('  ')
                    gs = cl.getGroup(msg.to)
@@ -1959,7 +1959,7 @@ def bot(op):
                                cl.CloneContactProfile(target)
                                cl.sendText(msg.to, "Copied.")
                             except Exception as e:
-                                print e
+                                print ("e")
             elif msg.text in ["Mybackup","mybackup"]:
                 try:
                     cl.updateDisplayPicture(backup.pictureStatus)
@@ -1971,7 +1971,7 @@ def bot(op):
             elif "Fancytext: " in msg.text:
                 txt = msg.text.replace("Fancytext: ", "")
                 cl.kedapkedip(msg.to,txt)
-                print "[Command] Kedapkedip"
+                print ("[Command] Kedapkedip")
                     
             elif "Tr-id " in msg.text:
                 isi = msg.text.replace("Tr-id ","")
@@ -2229,7 +2229,7 @@ def bot(op):
                             if '&list=' not in a['href']:
                                 hasil += ''.join((a['title'],'\nUrl : http://www.youtube.com' + a['href'],'\n\n'))
                         cl.sendText(msg.to,hasil)
-                        print '[Command] Youtube Search'
+                        print ("[Command] Youtube Search")
                         
             elif "Lirik " in msg.text:
                 try:
@@ -2658,7 +2658,7 @@ def bot(op):
     
     
     except Exception as error:
-        print error
+        print ("error")
 
 def autolike():
     count = 1
@@ -2668,7 +2668,7 @@ def autolike():
              if posts["postInfo"]["liked"] is False:
                 if wait["likeOn"] == True:
                    cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1001)
-                   print "Like"
+                   print ("Like")
                    if wait["commentOn"] == True:
                       if posts["userInfo"]["writerMid"] in wait["commentBlack"]:
                          pass
@@ -2690,11 +2690,11 @@ def likefriend():
       if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
         try:
           cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-          print "Like"
+          print ("Like")
         except:
           pass
       else:
-          print "Already Liked"
+          print ("Already Liked")
 time.sleep(0.60)
 
 def likeme():
@@ -2704,11 +2704,11 @@ def likeme():
             if hasil['result']['posts'][zx]['userInfo']['mid'] in mid:
                 try:
                     cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    print "Like"
+                    print ("Like")
                 except:
                     pass
             else:
-                print "Status Sudah di Like"
+                print ("Status Sudah di Like")
 
 
 while True:
