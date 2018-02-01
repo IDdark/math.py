@@ -2291,7 +2291,7 @@ def bot(op):
                 items = []
                 items = items + (_images_get_all_items(raw_html))
                 path = random.choice(items)
-                print path
+                print ("path")
                 try:
                     cl.sendImageWithURL(msg.to,path)
                 except:
@@ -2654,7 +2654,7 @@ def bot(op):
             
         
         if op.type == 59:
-            print op
+            print ("op")
     
     
     except Exception as error:
