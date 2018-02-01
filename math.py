@@ -24,6 +24,7 @@ cl = LINETCR.LINE()
 cl.login(token="CARA DAPETIN TOKET.... LINK : NEKOPOI.GDN\nJAVAVIDOL.COM\nENTAH WEB APA LAGI UNTUK DAPAETIN TOKET")
 cl.loginResult()
 
+print ("==================[Login Success]===================")
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -321,7 +322,7 @@ def summon(to, nama):
     msg.to = to
     msg.text = "\xe2\x95\x94\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\n"+bb+"\xe2\x95\x9a\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90"
     msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+aa+']}','EMTVER':'4'}
-   
+    print "[Command] Tag All"
     try:
        cl.sendMessage(msg)
     except Exception as error:
