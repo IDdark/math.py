@@ -2387,7 +2387,7 @@ def bot(op):
                     cl.sendText(msg.to, botKernel + "\n\n===SERVER INFO CPU===")
                     
             elif "Restart" in msg.text:
-                    print "[Command]Restart"
+                    print ("[Command]Restart")
                     try:
                         cl.sendText(msg.to,"Restarting...")
                         cl.sendText(msg.to,"Restart Success")
